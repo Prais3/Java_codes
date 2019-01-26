@@ -1,0 +1,82 @@
+//---------------------------------------------------------------------------------------------------------------
+// Name: Varun Jani
+// Email: vxj5053@psu.edu
+// Class: CMPSC 122
+// Program 1.5
+// Due Date: December 5, 2018
+//
+// Description: This program asks us to implement insert, search, inorder, preorder, postorder in bst.h and 
+// selection sort function in sort.cxx and then run them to test the cases implemented in sort.cxx. It will
+// show success if all the test cases are passed and then discuss about test case 7
+//
+// Acknowledgement:
+// 1. I discussed with Ajay how to solve the segmentation error (core dumped) error
+//---------------------------------------------------------------------------------------------------------------
+
+g++ -ansi -pedantic -Wall sort.cxx -o sort
+./sort
+
+The functions I implemeneted:
+
+void Swap(double* a, double* b)
+void SelectionSort(double* arr, int n)
+Node *visit(Node *root);
+void Clear(Node* root);
+Node* Search(Node *&root, double query);
+void Insert(Node *&root, double value);
+void Inorder(Node *&root, void (*visit)(const Node *root));	
+void Preorder(Node *&root, void (*visit)(const Node *root));
+void Postorder(Node *&root, void (*visit)(const Node *root));
+
+Test 7: compare sorting times by selection sort and by building BST
+    1) sorting 10 random values
+       BstSort      (..) takes 0.000015 secs
+       SelectionSort(..) takes 0.000004 secs
+       Success
+    2) sorting 100 random values
+       BstSort      (..) takes 0.000058 secs
+       SelectionSort(..) takes 0.000071 secs
+       Success
+    3) sorting 500 random values
+       BstSort      (..) takes 0.000332 secs
+       SelectionSort(..) takes 0.000843 secs
+       Success
+    4) sorting 1000 random values
+       BstSort      (..) takes 0.000210 secs
+       SelectionSort(..) takes 0.001549 secs
+       Success
+    5) sorting 5000 random values
+       BstSort      (..) takes 0.001354 secs
+       SelectionSort(..) takes 0.031555 secs
+       Success
+    6) sorting 10000 random values
+       BstSort      (..) takes 0.002190 secs
+       SelectionSort(..) takes 0.108122 secs
+       Success
+    7) sorting 50000 random values
+       BstSort      (..) takes 0.015263 secs
+       SelectionSort(..) takes 2.662987 secs
+       Success
+    8) sorting 100000 random values
+       BstSort      (..) takes 0.032526 secs
+       SelectionSort(..) takes 10.592144 secs
+       Success
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Out of the two sorting methods, the results show that Binary Search Tree sorting is better than Selection Sorting when the input size is large because 
+// BST sorting time complexity is O(n), which is a linear time complexity while the time complexity of Selection Sorting is O(n^2), which is a quadratic 
+// time complexity. So, when the input size increases, the time complexity increases rapidly for Selection sorting, but not as much for BST sorting.
+// Also, since BST sorting involves recursion, which is usually much faster than just comparision of values and then swapping them when the input is large
+// and so BST sorting is faster than Selection sort for higher number of inputs like 1000, 5000, 10000 and so on. 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
