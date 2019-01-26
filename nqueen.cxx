@@ -1,17 +1,9 @@
 //---------------------------------------------------------------------------------------------------------------
-// Name: Varun Jani
-// Email: vxj5053@psu.edu
-// Class: CMPSC 122
-// Program 1.1
-// Due Date: September 19, 2018
+// author @ Varun Jani
 //
 // Description: This program reads the chessboard size and queen locations from the input file
 // and prints a chessboard using the location of the queens. Then the other function/s check the
 // safety of the queen in that location and check if the nqueen problem is solved or not.
-//
-// Acknowledgement:
-// 1. I discussed with a tutor(Deep) at the learning center about the implementation of the chessboard for nqueen
-// 2. I discussed with Austin how to solve the segmentation error (core dumped)
 //---------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
@@ -33,7 +25,7 @@ bool** ReadChessboard(char* filepath, int& num_rows, int& num_cols, int& num_que
 
     int a,b;
     
-    //Creating a chessboard by dynamic memory allocation
+    //Creating a chessboard using dynamic memory allocation
     bool **board;
     board = new bool* [num_rows];
     for(int i = 0; i < num_rows; i ++)
@@ -60,7 +52,6 @@ bool** ReadChessboard(char* filepath, int& num_rows, int& num_cols, int& num_que
 void PrintChessboard(bool** board, int num_rows, int num_cols)
 {
     cout << "Print chess board:" << endl << endl;
-
     cout << "   ";
     
     //if-else statement to check rows and columns and print accordingly 
