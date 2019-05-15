@@ -1,6 +1,5 @@
-# Word_Search_Program
-Java application that implements a simple word search program
+# Java_codes
 
-This program only searches for words that are horizontal in the word search puzzle.
+1. Java application that implements a simple word search program (READ README FILE FOR MORE INFORMATION)
 
-It does find the word if it is reversed. Program will be updated soon to include vertical and diagonal searches
+2. Java program that calls the databse made using apache derby and solves the queries requested in the java code. (READ README FILE FOR MORE INFORMATION)
