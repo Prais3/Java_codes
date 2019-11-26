@@ -99,7 +99,7 @@ public class Movie {
         }
         
         // Catch block where an exception is called if any shows up when running the program 
-	      catch(SQLException sqlException)
+	catch(SQLException sqlException)
         {
             sqlException.getMessage();
         }  
