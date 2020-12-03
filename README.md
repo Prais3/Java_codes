@@ -9,7 +9,7 @@ is the only .java file required here, and the other file is an SQL database.
 
 Editor: IntelliJ
 
-Main.java is implementing a simple word search game. It's a very basic word search game but has practical use and can have more possibilities added to it to make it more complicated and useful.
+Main.java is implementing a simple word search game.
 
 
 
